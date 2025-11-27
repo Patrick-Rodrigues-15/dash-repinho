@@ -1,0 +1,48 @@
+:root{
+  --bg: #0d1c10;
+  --card:#0b1a0f;
+  --muted:#a1b9a1;
+  --accent:#22c55e;
+  --accent-2:#15803d;
+  --ok:#16a34a;
+  --warn:#f59e0b;
+  --danger:#ef4444;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  margin:0;background:linear-gradient(180deg,#07150a,#09200f);color:#e6f6ea;
+  padding:18px;
+}
+.app{max-width:1200px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px;border-radius:12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:48px;height:48px;border-radius:10px;background:rgba(255,255,255,0.12);display:grid;place-items:center;font-weight:700}
+.sub{opacity:0.9;font-size:13px}
+.controls{display:flex;gap:8px;align-items:center}
+.btn{padding:8px 12px;border-radius:8px;border:0;background:rgba(255,255,255,0.06);color:inherit;cursor:pointer}
+.btn.primary{background:rgba(255,255,255,0.15);font-weight:700}
+main{margin-top:18px}
+.kpi-row{display:flex;gap:12px}
+.kpi{flex:1;padding:16px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))}
+.kpi-title{font-size:13px;color:var(--muted)}
+.kpi-value{font-size:22px;font-weight:700;margin-top:8px}
+.content-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+.card{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px}
+.table-wrap{overflow:auto;max-height:320px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{position:sticky;top:0;background:rgba(0,0,0,0.25);padding:8px;text-align:left}
+tbody td{padding:10px;border-top:1px dashed rgba(255,255,255,0.04)}
+footer{margin-top:12px;text-align:center;color:var(--muted);font-size:13px}
+.modal{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,0.5)}
+.modal.hidden{display:none}
+.modal-content{background:linear-gradient(180deg,#07150a,#09200f);padding:18px;border-radius:12px;min-width:320px}
+.modal-content h3{margin-bottom:8px}
+.modal-content form{display:grid;gap:8px}
+.modal-content label{display:flex;flex-direction:column;font-size:13px;color:var(--muted)}
+.modal-content input, .modal-content select{padding:8px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:inherit;margin-top:6px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+@media (max-width:900px){
+  .kpi-row{flex-direction:column}
+}
